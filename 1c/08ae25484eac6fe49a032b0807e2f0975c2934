@@ -1,0 +1,14 @@
+docker-compose.yml
+  h_540425bd35f9d2 4,7,14,17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "1c08ae25484eac6fe49a032b0807e2f0975c2934",
+  "prompts": {},
+  "humans": {
+    "h_540425bd35f9d2": {
+      "author": "AbderrahmaneOsm <abderrahmaneosmani2@gmail.com>"
+    }
+  }
+}
