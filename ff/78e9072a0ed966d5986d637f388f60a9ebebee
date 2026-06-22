@@ -1,0 +1,14 @@
+src/pages/index.astro
+  h_540425bd35f9d2 2-3,5,103,112-113,265-266,327-331,442-445
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "ff78e9072a0ed966d5986d637f388f60a9ebebee",
+  "prompts": {},
+  "humans": {
+    "h_540425bd35f9d2": {
+      "author": "AbderrahmaneOsm <abderrahmaneosmani2@gmail.com>"
+    }
+  }
+}
