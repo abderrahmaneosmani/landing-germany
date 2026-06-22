@@ -1,24 +1,18 @@
 services:
   landing:
     image: registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest
-    restart: unless-stopped
+
     labels:
       - "traefik.enable=true"
-
+      - "traefik.docker.network=traefik_proxy"
       - "traefik.http.routers.landing.rule=Host(`lernedeutschmituns.com`) || Host(`www.lernedeutschmituns.com`)"
       - "traefik.http.routers.landing.entrypoints=websecure"
       - "traefik.http.routers.landing.tls.certresolver=letsencrypt"
-      - "traefik.http.routers.landing.middlewares=landing-www-redirect"
       - "traefik.http.services.landing.loadbalancer.server.port=80"
 
-      # www → non-www
-      - "traefik.http.middlewares.landing-www-redirect.redirectregex.regex=^https://www\\.lernedeutschmituns\\.com/(.*)"
-      - "traefik.http.middlewares.landing-www-redirect.redirectregex.replacement=https://lernedeutschmituns.com/$${1}"
-      - "traefik.http.middlewares.landing-www-redirect.redirectregex.permanent=true"
-
     networks:
-      - traefik_network
+      - traefik_proxy
 
 networks:
-  traefik_network:
+  traefik_proxy:
     external: true
