@@ -1,8 +1,8 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
-const APP_URL = 'https://app.lernedeutschmituns.com/';
+const APP_URL = "https://app.lernedeutschmituns.com/";
 ---
 
 <!doctype html>
@@ -11,7 +11,6 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-
     <!-- NAV -->
     <nav>
       <a href="/" class="logo">🇩🇪 Deutsch Lernen</a>
@@ -52,57 +51,84 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
         <div class="card">
           <div class="card-icon">📚</div>
           <h3>Vocabulary</h3>
-          <p>Structured word lists organized by level and topic. Build your vocabulary step by step from A1 to C1.</p>
+          <p>
+            Structured word lists organized by level and topic. Build your
+            vocabulary step by step from A1 to C1.
+          </p>
         </div>
         <div class="card">
           <div class="card-icon">✏️</div>
           <h3>Grammar Exercises</h3>
-          <p>Interactive exercises covering cases, verb conjugations, sentence structure, and more.</p>
+          <p>
+            Interactive exercises covering cases, verb conjugations, sentence
+            structure, and more.
+          </p>
         </div>
         <div class="card">
           <div class="card-icon">📖</div>
           <h3>Reading Stories</h3>
-          <p>Short stories with audio support, graded by difficulty so you always read at the right level.</p>
+          <p>
+            Short stories with audio support, graded by difficulty so you always
+            read at the right level.
+          </p>
         </div>
         <div class="card">
           <div class="card-icon">📈</div>
           <h3>Progress Tracking</h3>
-          <p>See your streaks, completed lessons, and time spent. A leaderboard keeps the competitive edge alive.</p>
+          <p>
+            See your streaks, completed lessons, and time spent. A leaderboard
+            keeps the competitive edge alive.
+          </p>
         </div>
         <div class="card">
           <div class="card-icon">👩‍🏫</div>
           <h3>Teacher Support</h3>
-          <p>Teachers can assign exercises, track student progress, and manage their class — all from one dashboard.</p>
+          <p>
+            Teachers can assign exercises, track student progress, and manage
+            their class — all from one dashboard.
+          </p>
         </div>
         <div class="card">
           <div class="card-icon">🔐</div>
           <h3>Easy Sign-in</h3>
-          <p>Log in with your Google account in one click. No password to remember, no hassle.</p>
+          <p>
+            Log in with your Google account in one click. No password to
+            remember, no hassle.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="how">
+    <section id="how-it-works" class="features">
       <div class="section-label">How it works</div>
       <h2>Three steps to fluency</h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
           <h3>Create your account</h3>
-          <p>Sign up in seconds with Google or email. Pick your current level and we'll build the right path for you.</p>
+          <p>
+            Sign up in seconds with Google or email. Pick your current level and
+            we'll build the right path for you.
+          </p>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
           <div class="step-num">02</div>
           <h3>Pick a module</h3>
-          <p>Choose vocabulary, grammar, or reading — or follow the guided course that mixes all three.</p>
+          <p>
+            Choose vocabulary, grammar, or reading — or follow the guided course
+            that mixes all three.
+          </p>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
           <div class="step-num">03</div>
           <h3>Track your growth</h3>
-          <p>Complete exercises, earn points, climb the leaderboard, and watch your German get better every day.</p>
+          <p>
+            Complete exercises, earn points, climb the leaderboard, and watch
+            your German get better every day.
+          </p>
         </div>
       </div>
     </section>
@@ -122,13 +148,16 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
       <span class="footer-sep">·</span>
       <a href="/about">About</a>
     </footer>
-
   </body>
 </html>
 
 <style>
   /* ── Reset / base ── */
-  *, *::before, *::after { box-sizing: border-box; }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
   :root {
     --black: #0f1219;
@@ -152,7 +181,10 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     -webkit-font-smoothing: antialiased;
   }
 
-  a { color: inherit; text-decoration: none; }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   /* ── Nav ── */
   nav {
@@ -162,9 +194,9 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     padding: 1.1rem 2rem;
     position: sticky;
     top: 0;
-    background: rgba(255,255,255,0.92);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     z-index: 100;
   }
 
@@ -185,7 +217,9 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     color: var(--gray);
     transition: color 0.15s;
   }
-  .nav-links a:not(.btn-outline):not(.btn-primary):hover { color: var(--black); }
+  .nav-links a:not(.btn-outline):not(.btn-primary):hover {
+    color: var(--black);
+  }
 
   /* ── Buttons ── */
   .btn-primary {
@@ -195,9 +229,14 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     border-radius: 8px;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: background 0.15s, transform 0.1s;
+    transition:
+      background 0.15s,
+      transform 0.1s;
   }
-  .btn-primary:hover { background: #2a2f3e; transform: translateY(-1px); }
+  .btn-primary:hover {
+    background: #2a2f3e;
+    transform: translateY(-1px);
+  }
 
   .btn-outline {
     border: 1.5px solid #d1d5db;
@@ -208,7 +247,9 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     font-size: 0.9rem;
     transition: border-color 0.15s;
   }
-  .btn-outline:hover { border-color: var(--black); }
+  .btn-outline:hover {
+    border-color: var(--black);
+  }
 
   .btn-lg {
     padding: 0.85rem 2rem !important;
@@ -221,7 +262,9 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     font-size: 1rem;
     transition: color 0.15s;
   }
-  .btn-ghost:hover { color: var(--black); }
+  .btn-ghost:hover {
+    color: var(--black);
+  }
 
   /* ── Hero ── */
   .hero {
@@ -253,7 +296,9 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     color: var(--black);
   }
 
-  .accent { color: var(--red); }
+  .accent {
+    color: var(--red);
+  }
 
   .hero-sub {
     font-size: 1.15rem;
@@ -279,8 +324,12 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     font-size: 0.9rem;
     color: var(--gray);
   }
-  .stat strong { color: var(--black); }
-  .stat-sep { opacity: 0.4; }
+  .stat strong {
+    color: var(--black);
+  }
+  .stat-sep {
+    opacity: 0.4;
+  }
 
   /* ── Section shared ── */
   .section-label {
@@ -292,13 +341,15 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     margin-bottom: 0.6rem;
   }
 
-  .features, .how {
+  .features,
+  .how {
     max-width: var(--max);
     margin: 0 auto;
     padding: 5rem 2rem;
   }
 
-  .features h2, .how h2 {
+  .features h2,
+  .how h2 {
     font-size: clamp(1.8rem, 4vw, 2.6rem);
     font-weight: 800;
     letter-spacing: -0.025em;
@@ -317,26 +368,45 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     background: var(--gray-light);
     border-radius: var(--radius);
     padding: 1.8rem;
-    transition: transform 0.18s, box-shadow 0.18s;
+    transition:
+      transform 0.18s,
+      box-shadow 0.18s;
   }
   .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   }
 
-  .card-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+  .card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
   .card h3 {
     font-size: 1.05rem;
     font-weight: 700;
     margin: 0 0 0.4rem;
     color: var(--black);
   }
-  .card p { font-size: 0.95rem; color: var(--gray); margin: 0; }
+  .card p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin: 0;
+  }
 
   /* ── How it works ── */
-  .how { background: var(--gray-light); max-width: 100%; border-radius: 0; }
-  .how > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
-  .how h2 { max-width: var(--max); }
+  .how {
+    background: var(--gray-light);
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .how > * {
+    max-width: var(--max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .how h2 {
+    max-width: var(--max);
+  }
 
   .steps {
     display: flex;
@@ -369,7 +439,11 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     margin: 0 0 0.4rem;
     color: var(--black);
   }
-  .step p { font-size: 0.95rem; color: var(--gray); margin: 0; }
+  .step p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin: 0;
+  }
 
   .step-arrow {
     font-size: 1.5rem;
@@ -396,7 +470,7 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
   }
 
   .cta-banner p {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 1.05rem;
     margin: 0 0 2rem;
   }
@@ -405,7 +479,9 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     background: var(--gold);
     color: var(--black) !important;
   }
-  .cta-banner .btn-primary:hover { background: var(--gold-dark); }
+  .cta-banner .btn-primary:hover {
+    background: var(--gold-dark);
+  }
 
   /* ── Footer ── */
   footer {
@@ -416,17 +492,29 @@ const APP_URL = 'https://app.lernedeutschmituns.com/';
     padding: 2rem;
     font-size: 0.9rem;
     color: var(--gray);
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
 
-  footer a:hover { color: var(--black); }
-  .footer-sep { opacity: 0.4; }
+  footer a:hover {
+    color: var(--black);
+  }
+  .footer-sep {
+    opacity: 0.4;
+  }
 
   /* ── Responsive ── */
   @media (max-width: 680px) {
-    nav { padding: 1rem; }
-    .nav-links a:not(.btn-primary) { display: none; }
-    .step-arrow { display: none; }
-    .hero { padding: 4rem 1.25rem 3rem; }
+    nav {
+      padding: 1rem;
+    }
+    .nav-links a:not(.btn-primary) {
+      display: none;
+    }
+    .step-arrow {
+      display: none;
+    }
+    .hero {
+      padding: 4rem 1.25rem 3rem;
+    }
   }
 </style>
