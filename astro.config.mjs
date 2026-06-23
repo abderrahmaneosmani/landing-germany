@@ -7,6 +7,13 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://lernedeutschmituns.com',
+	i18n: {
+		locales: ['en', 'fr', 'ar'],
+		defaultLocale: 'en',
+		routing: {
+			prefixDefaultLocale: false,
+		},
+	},
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
