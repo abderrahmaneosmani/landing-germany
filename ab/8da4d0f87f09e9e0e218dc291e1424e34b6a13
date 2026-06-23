@@ -1,0 +1,31 @@
+src/pages/fr/index.astro
+  s_687971c07f1839::t_84c0092409364b 1-5
+src/components/Landing.astro
+  s_687971c07f1839::t_a57c38910bedfd 1-526
+src/i18n/ui.ts
+  s_687971c07f1839::t_a5503958964560 1-342
+astro.config.mjs
+  s_687971c07f1839::t_b51a0df7f8f3a0 10-16
+src/pages/index.astro
+  s_687971c07f1839::t_696e9eca2cffbb 2,5
+src/i18n/utils.ts
+  s_687971c07f1839::t_a89f27aea0ee9e 1-17
+src/pages/ar/index.astro
+  s_687971c07f1839::t_81e68a641d5de9 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "ab8da4d0f87f09e9e0e218dc291e1424e34b6a13",
+  "prompts": {},
+  "sessions": {
+    "s_687971c07f1839": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8df525fe-ea61-42df-ae53-4b33df8b75e2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "AbderrahmaneOsm <abderrahmaneosmani2@gmail.com>"
+    }
+  }
+}
