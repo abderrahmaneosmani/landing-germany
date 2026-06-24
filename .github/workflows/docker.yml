@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /root/landing
+            cd /root/landing-germany
             git pull origin main --no-edit
 
             docker build -t registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest .
