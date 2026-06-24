@@ -15,6 +15,7 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
+          envs: REGISTRY_USER,REGISTRY_TOKEN
           script: |
             set -e
             REPO=/root/landing-germany
@@ -26,6 +27,12 @@ jobs:
             cd "$REPO"
             git pull origin main --no-edit
 
+            # Authenticate to the registry so the push below can't silently fail
+            echo "$REGISTRY_TOKEN" | docker login registry.gitlab.com -u "$REGISTRY_USER" --password-stdin
+
             # Build and push the image; watchtower auto-deploys it on the backend stack
             docker compose build
             docker compose push
+        env:
+          REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
+          REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
