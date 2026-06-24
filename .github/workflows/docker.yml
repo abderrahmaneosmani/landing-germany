@@ -16,11 +16,19 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /root/landing-germany
+            set -e
+            REPO=/root/landing-germany
+            IMAGE=registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest
+
+            if [ ! -d "$REPO/.git" ]; then
+              git clone git@github.com:abderrahmaneosmani/landing-germany.git "$REPO"
+            fi
+
+            cd "$REPO"
             git pull origin main --no-edit
 
-            docker build -t registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest .
-            docker push registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest
+            docker build -t "$IMAGE" .
+            docker push "$IMAGE"
 
             docker compose pull
             docker compose up -d
