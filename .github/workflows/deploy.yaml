@@ -28,7 +28,7 @@ jobs:
             git pull origin main --no-edit
 
             # Authenticate to the registry so the push below can't silently fail
-            echo "$REGISTRY_TOKEN" | docker login registry.gitlab.com -u "$REGISTRY_USER" --password-stdin
+            printf '%s' "$REGISTRY_TOKEN" | docker login registry.gitlab.com -u "$REGISTRY_USER" --password-stdin
 
             # Build and push the image; watchtower auto-deploys it on the backend stack
             docker compose build
