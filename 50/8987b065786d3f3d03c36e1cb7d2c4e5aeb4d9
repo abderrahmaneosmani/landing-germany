@@ -1,0 +1,22 @@
+.github/workflows/ci.yml
+  s_f1b9489fffc5d8::t_cd88bac621c93d 1-24
+.github/workflows/docker.yml
+  s_f1b9489fffc5d8::t_cdf306e4e6dbf9 9,19-23
+  s_f1b9489fffc5d8::t_f32f3f8a057778 2-5,7-8,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "508987b065786d3f3d03c36e1cb7d2c4e5aeb4d9",
+  "prompts": {},
+  "sessions": {
+    "s_f1b9489fffc5d8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0939bd44-91bf-4c5a-b174-7151eea652e1",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "AbderrahmaneOsm <abderrahmaneosmani2@gmail.com>"
+    }
+  }
+}
