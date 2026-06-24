@@ -27,6 +27,10 @@ jobs:
             cd "$REPO"
             git pull origin main --no-edit
 
+            # TEMP DEBUG: confirm the secrets actually arrived (lengths only, values stay masked)
+            echo "REGISTRY_USER length: ${#REGISTRY_USER}"
+            echo "REGISTRY_TOKEN length: ${#REGISTRY_TOKEN}"
+
             # Authenticate to the registry so the push below can't silently fail
             printf '%s' "$REGISTRY_TOKEN" | docker login registry.gitlab.com -u "$REGISTRY_USER" --password-stdin
 
