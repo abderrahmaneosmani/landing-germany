@@ -2,18 +2,3 @@ services:
   landing:
     image: registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest
     build: .
-
-    labels:
-      - "traefik.enable=true"
-      - "traefik.docker.network=traefik_proxy"
-      - "traefik.http.routers.landing.rule=Host(`lernedeutschmituns.com`) || Host(`www.lernedeutschmituns.com`)"
-      - "traefik.http.routers.landing.entrypoints=websecure"
-      - "traefik.http.routers.landing.tls.certresolver=letsencrypt"
-      - "traefik.http.services.landing.loadbalancer.server.port=80"
-
-    networks:
-      - traefik_proxy
-
-networks:
-  traefik_proxy:
-    external: true

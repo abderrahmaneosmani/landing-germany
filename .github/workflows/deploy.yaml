@@ -26,6 +26,6 @@ jobs:
             cd "$REPO"
             git pull origin main --no-edit
 
+            # Build and push the image; watchtower auto-deploys it on the backend stack
             docker compose build
             docker compose push
-            docker compose up -d --force-recreate
