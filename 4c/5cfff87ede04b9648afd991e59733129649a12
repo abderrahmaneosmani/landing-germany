@@ -1,0 +1,19 @@
+docker-compose.yml
+  s_1b98aeb7274b06::t_62f7c979fe36ac 5-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "4c5cfff87ede04b9648afd991e59733129649a12",
+  "prompts": {},
+  "sessions": {
+    "s_1b98aeb7274b06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "95a64ecd-3024-4bac-a0de-391fb2806020",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "AbderrahmaneOsm <abderrahmaneosmani2@gmail.com>"
+    }
+  }
+}
