@@ -1,0 +1,14 @@
+astro.config.mjs
+  h_540425bd35f9d2 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "3d79a1db3e2024bc9b9a645902b482636056cb40",
+  "prompts": {},
+  "humans": {
+    "h_540425bd35f9d2": {
+      "author": "AbderrahmaneOsm <abderrahmaneosmani2@gmail.com>"
+    }
+  }
+}
