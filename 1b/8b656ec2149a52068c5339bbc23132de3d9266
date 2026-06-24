@@ -1,0 +1,19 @@
+.github/workflows/deploy.yaml
+  s_1b98aeb7274b06::t_71e92a8c3f7f63 33,36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "1b8b656ec2149a52068c5339bbc23132de3d9266",
+  "prompts": {},
+  "sessions": {
+    "s_1b98aeb7274b06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "95a64ecd-3024-4bac-a0de-391fb2806020",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "AbderrahmaneOsm <abderrahmaneosmani2@gmail.com>"
+    }
+  }
+}
