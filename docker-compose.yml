@@ -1,6 +1,7 @@
 services:
   landing:
     image: registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest
+    build: .
 
     labels:
       - "traefik.enable=true"

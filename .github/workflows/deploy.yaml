@@ -18,7 +18,6 @@ jobs:
           script: |
             set -e
             REPO=/root/landing-germany
-            IMAGE=registry.gitlab.com/abderrahmaneosmani8/learn-germany/landing:latest
 
             if [ ! -d "$REPO/.git" ]; then
               git clone git@github.com:abderrahmaneosmani/landing-germany.git "$REPO"
@@ -27,8 +26,6 @@ jobs:
             cd "$REPO"
             git pull origin main --no-edit
 
-            docker build -t "$IMAGE" .
-            docker push "$IMAGE"
-
-            docker compose pull
-            docker compose up -d
+            docker compose build
+            docker compose push
+            docker compose up -d --force-recreate
