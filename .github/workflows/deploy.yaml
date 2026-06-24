@@ -30,9 +30,10 @@ jobs:
             # Authenticate to the registry so the push below can't silently fail
             printf '%s' "$REGISTRY_TOKEN" | docker login registry.gitlab.com -u "$REGISTRY_USER" --password-stdin
 
-            # Build and push the image; watchtower auto-deploys it on the backend stack
+            # Build, push, and recreate the running container (this stack owns the runtime + Traefik routing)
             docker compose build
             docker compose push
+            docker compose up -d
         env:
           REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
           REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
