@@ -30,6 +30,7 @@ interface Translation {
   nav: {
     features: string;
     how: string;
+    blog: string;
     login: string;
     getStarted: string;
   };
@@ -57,6 +58,10 @@ interface Translation {
     sub: string;
     btn: string;
   };
+  youtube: {
+    label: string;
+    title: string;
+  };
   footer: {
     app: string;
     about: string;
@@ -72,6 +77,7 @@ export const ui: Record<Lang, Translation> = {
     nav: {
       features: 'Features',
       how: 'How it works',
+      blog: 'Blog',
       login: 'Log in',
       getStarted: 'Get started free',
     },
@@ -164,6 +170,7 @@ export const ui: Record<Lang, Translation> = {
     nav: {
       features: 'Fonctionnalités',
       how: 'Comment ça marche',
+      blog: 'Blog',
       login: 'Connexion',
       getStarted: 'Commencer gratuitement',
     },
@@ -256,6 +263,7 @@ export const ui: Record<Lang, Translation> = {
     nav: {
       features: 'المميزات',
       how: 'كيف يعمل',
+      blog: 'المدونة',
       login: 'تسجيل الدخول',
       getStarted: 'ابدأ مجانًا',
     },
