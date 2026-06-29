@@ -32,6 +32,9 @@ jobs:
 
             docker compose build
             docker compose push
+
+            docker compose -f /root/backend-germany/docker-compose.yml pull landing
+            docker compose -f /root/backend-germany/docker-compose.yml up -d landing
         env:
           REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
           REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
